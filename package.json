@@ -1,0 +1,16 @@
+{
+  "name": "form-validation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "gh-pages": "^3.2.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "deploy": "gh-pages -d forge"
+  },
+  "homepage": "https://github.com/kruze-dev/Form_validation.git",
+  "author": "",
+  "license": "ISC"
+}

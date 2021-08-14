@@ -1,0 +1,165 @@
+$transition:  all 0.5s;
+
+* {
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height:100vh;
+    background: rgb(87, 189, 130);
+    position:relative;
+    transition: $transition;
+}
+
+form {
+    
+   
+    .name-field, 
+    .user-field, 
+    .password-field,
+    .finish-field {
+         position:absolute;
+         top:50vh;
+         left:50vw;
+         background: #fff;
+         width: 400px;
+         height: 50px;
+         transform: translate(-50%, -50%);
+         display:flex;
+         justify-content: space-between;
+         align-items: center;
+         border-radius:5px;
+         transition:$transition;
+
+        
+    }
+     
+
+
+
+.progress-username {
+        width: 400px;
+        height: 2px;
+        background: white;
+        position:absolute;
+        top:50vh;
+        left:50vw;
+        border-radius:5px;
+        transition:$transition;
+        transform: translate(-200px, -35px);
+
+         &::after {
+             position:absolute;
+             content: "";
+             width: 133.3px;
+             height: 2px;
+             background: rgba(121, 83, 209, 0.849);
+             z-index: 2;
+             transform-origin: left;
+             box-shadow: rgba(0, 0, 0, 0.582) 0.5px 0.5px 2px;
+             transition:$transition;
+            }
+            
+            
+        }
+
+
+
+        .progress-email {
+                
+            &::after {
+                
+                transform:translateX(133.3px);
+                transition:$transition;
+            }
+        }
+      
+
+       .progress-password {
+
+              &::after {
+                
+                transform:translateX(266.6px);
+                transition:$transition
+           }
+       }
+     
+      .progress-done {
+              display: none;
+              transition: $transition;
+    
+      }
+    
+
+    .name-field i, 
+    .user-field i, 
+    .password-field i,
+    .finish-field i {
+        padding:10px;
+        cursor: pointer;
+       
+    }
+
+
+    .name-field input, 
+    .user-field input, 
+    .password-field input,
+    .finish-field input {
+                border:none;
+               flex: 1;
+               height: 100%;
+               outline:none;
+    }
+
+    .inactive {
+        opacity: 0;
+        pointer-events: none;
+        transform: translate(-50%, 50%);
+        transition:$transition;
+    }
+
+    .active {
+        opacity: 1;
+        pointer-events: all;
+        transform: translate(-50%, -50%);
+        transition: $transition;
+    }
+}
+
+.error-note-field {
+         position:absolute;
+         top:50vh;
+         left:50vw;
+         color:white;
+         background:transparent;
+         width: 400px;
+         height: 25px;
+        font-family: cursive;
+         transform: translate(-50%, 100%);
+        //  transform: translate(-50%, -50%);
+         z-index: -1;
+         display:flex;
+        
+
+         p {
+             transition: $transition;
+         }
+}
+
+
+@keyframes shake{
+    0% {
+        transform: translate(-50%, -50%) rotate(0);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) rotate(5deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
