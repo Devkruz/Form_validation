@@ -10,7 +10,7 @@
   "scripts": {
     "deploy": "gh-pages -d forge"
   },
-  "homepage": "https://github.com/kruze-dev/Form_validation.git",
+  "homepage": "https:///kruze-dev.github.io/Form_validation",
   "author": "",
   "license": "ISC"
 }
