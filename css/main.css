@@ -1,0 +1,180 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: #57bd82;
+  position: relative;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+form .name-field,
+form .user-field,
+form .password-field,
+form .finish-field {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  background: #fff;
+  width: 400px;
+  height: 50px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+form .progress-username {
+  width: 400px;
+  height: 2px;
+  background: white;
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  border-radius: 5px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: translate(-200px, -35px);
+          transform: translate(-200px, -35px);
+}
+
+form .progress-username::after {
+  position: absolute;
+  content: "";
+  width: 133.3px;
+  height: 2px;
+  background: rgba(121, 83, 209, 0.849);
+  z-index: 2;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.582) 0.5px 0.5px 2px;
+          box-shadow: rgba(0, 0, 0, 0.582) 0.5px 0.5px 2px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+form .progress-email::after {
+  -webkit-transform: translateX(133.3px);
+          transform: translateX(133.3px);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+form .progress-password::after {
+  -webkit-transform: translateX(266.6px);
+          transform: translateX(266.6px);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+form .progress-done {
+  display: none;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+form .name-field i,
+form .user-field i,
+form .password-field i,
+form .finish-field i {
+  padding: 10px;
+  cursor: pointer;
+}
+
+form .name-field input,
+form .user-field input,
+form .password-field input,
+form .finish-field input {
+  border: none;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 100%;
+  outline: none;
+}
+
+form .inactive {
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+form .active {
+  opacity: 1;
+  pointer-events: all;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.error-note-field {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  color: white;
+  background: transparent;
+  width: 400px;
+  height: 25px;
+  font-family: cursive;
+  -webkit-transform: translate(-50%, 100%);
+          transform: translate(-50%, 100%);
+  z-index: -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.error-note-field p {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+@-webkit-keyframes shake {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0);
+            transform: translate(-50%, -50%) rotate(0);
+  }
+  50% {
+    -webkit-transform: translate(-50%, -50%) rotate(5deg);
+            transform: translate(-50%, -50%) rotate(5deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+@keyframes shake {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0);
+            transform: translate(-50%, -50%) rotate(0);
+  }
+  50% {
+    -webkit-transform: translate(-50%, -50%) rotate(5deg);
+            transform: translate(-50%, -50%) rotate(5deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
